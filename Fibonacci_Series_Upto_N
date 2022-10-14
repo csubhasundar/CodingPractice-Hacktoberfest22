@@ -1,0 +1,18 @@
+n=int(input("Enter the length of the series: "))
+a=0
+b=1
+c=a+b
+if n<0:
+    print("Negative Number given.")
+else:
+    if n==0:
+        print(f"Fibonacci series upto {n} no is {n}")
+    elif n==1:
+        print(f"Fibonacci series upto {n} no is 0 1")
+    else:
+        print(f"Fibonacci series upto {n} no is: 0 1",end=" ")
+        for i in range(2,n+1):
+            c=a+b
+            a=b
+            b=c
+            print(c,end=" ")
