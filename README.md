@@ -30,7 +30,7 @@ Choose both, make a pull request for your work and wait for it to be merged!!
 * Clone your fork down to your local machine.
 
 ```markdown
-git clone https://github.com/wbhoomika/python4beginners-Hacktoberfest22
+git clone https://github.com/csubhasundar/CodingPractice-Hacktoberfest22
 ```
 
 * Create a branch
@@ -54,6 +54,6 @@ git push origin branch-name
 
 
 ## A BIG Thanks To Our Contributors :handshake: :handshake:
-<a href="https://github.com/wbhoomika/python4beginners-Hacktoberfest22/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=wbhoomika/python4beginners-Hacktoberfest22"/>
+< ...a href="https://github.com/wbhoomika/python4beginners-Hacktoberfest22/graphs/contributors">
+  < ...img src="https://contrib.rocks/image?repo=wbhoomika/python4beginners-Hacktoberfest22"/>
 </a>
