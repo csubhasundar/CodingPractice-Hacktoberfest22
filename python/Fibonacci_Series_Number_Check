@@ -1,0 +1,14 @@
+import math
+
+def isperfectsquare(n):
+    s = int(math.sqrt(n))
+    return s*s == n
+
+def isFibonacci(n):
+    if isperfectsquare(5*n*n+4)==True or isperfectsquare(5*n*n-4)==True:
+        print(f"{num} is a Fibonacci Number.")
+    else:
+        print(f"{num} is not a Fibonacci Number.")
+
+num=int(input("Enter a number to check it's Fibonacci or not: "))
+isFibonacci(num)
