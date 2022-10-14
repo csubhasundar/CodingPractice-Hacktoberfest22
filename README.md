@@ -39,7 +39,7 @@ git clone https://github.com/csubhasundar/CodingPractice-Hacktoberfest22
 git checkout -b your-branch-name
 ```
 
-* Make your changes in "Python Projects" folder.
+* Make your changes in "Python/C/C++/java folder.
 * Commit and push your code.
 
 ```markdown
