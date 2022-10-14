@@ -54,6 +54,6 @@ git push origin branch-name
 
 
 ## A BIG Thanks To Our Contributors :handshake: :handshake:
-< ...a href="https://github.com/csubhasundar/CodingPractice-Hacktoberfest22/graphs/contributors">
+<a href="https://github.com/csubhasundar/CodingPractice-Hacktoberfest22/graphs/contributors">
   < ...img src="https://contrib.rocks/image?repo=wbhoomika/python4beginners-Hacktoberfest22"/>
 </a>
