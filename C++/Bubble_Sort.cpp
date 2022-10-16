@@ -1,40 +1,29 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-void bubblesort(int *a, int n)
+int main ()
 {
-    for (int i = 0; i < n - 1; i++)
-    {
-        for (int j = 0; j < n - 1 - i; j++)
-        {
-            if (a[j + 1] < a[j])
-            {
-                int t = a[j];
-                a[j] = a[j + 1];
-                a[j + 1] = t;
-            }
-        }
-    }
+   int i, j,temp,pass=0;
+   int a[10] = {10,2,0,14,43,25,18,1,5,45};
+   cout <<"Input list ...\n";
+   for(i = 0; i<10; i++) {
+      cout <<a[i]<<"\t";
+   }
+cout<<endl;
+for(i = 0; i<10; i++) {
+   for(j = i+1; j<10; j++)
+   {
+      if(a[j] < a[i]) {
+         temp = a[i];
+         a[i] = a[j];
+         a[j] = temp;
+      }
+   }
+pass++;
 }
-int main()
-{
-    int n;
-    cin >> n;
-    int *a = new int[n];
-    for (int i = 0; i < n; i++)
-    {
-        cin >> a[i];
-    }
-    // Before Bubble Sort 
-    for (int i = 0; i < n; i++)
-    {
-        cout << a[i] << " ";
-    }
-    cout<<endl;
-    bubblesort(a, n);
-    // After Bubble Sort
-    for (int i = 0; i < n; i++)
-    {
-        cout << a[i] << " ";
-    }
-    delete[] a;
+cout <<"Sorted Element List ...\n";
+for(i = 0; i<10; i++) {
+   cout <<a[i]<<"\t";
+}
+cout<<"\nNumber of passes taken to sort the list:"<<pass<<endl;
+return 0;
 }
