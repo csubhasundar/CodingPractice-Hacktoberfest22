@@ -1,3 +1,11 @@
+/*########################
+
+Parenthesis checking
+
+@author : Tapati Chakraborty
+student: GCETTB
+##########################*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -59,7 +67,7 @@ char pop(struct stack *ptr)
 //Check if paranthesis is match or not
 int paranthesisMatch(char *exp)
 {
-	// Dynamic allocation of memory for stack 
+	// Dynamic allocation of memory for stack
 	struct stack *s = (struct stack *) malloc(sizeof(struct stack));
 	s->top = -1;
 	s->size = 100;
