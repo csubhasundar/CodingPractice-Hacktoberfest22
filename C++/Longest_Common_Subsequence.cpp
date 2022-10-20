@@ -1,27 +1,43 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
+
 using namespace std;
-int solve(string& s, string& t, int i, int j, vector<vector<int>>& dp){
-    if(i==s.size()) return 0;
-    if(j==t.size()) return 0;
-    if(dp[i][j]!=-1) return dp[i][j];
-    int ans=0;
-    if(s[i]==t[j]) ans=1+solve(s,t,i+1,j+1,dp);
-    else ans=max(solve(s,t,i+1,j,dp), solve(s,t,i,j+1,dp));
-    dp[i][j]=ans;
-    return dp[i][j];
-}
-int longestCommonSubsequence(string text1, string text2) {
-    int n=text1.size(), m=text2.size();
-    vector<vector<int>> dp(n, vector<int>(m, -1));
-    int ans=solve(text1,text2,0,0,dp);
-    return ans;
-}
-int main(){
-    string s,t;
-    cin>>s>>t;
-    int ans=longestCommonSubsequence(s,t);
-    cout<<ans;
-    return 0;
-}
 
 
+int lcs(string s1, string s2)
+{
+    int m = s1.length(), n = s2.length();
+    
+    int dp[m+1][n+1];
+    
+    for(int i=0;i<=m;i++)
+        dp[i][0]=0;
+    
+    for(int j=0;j<=n;j++)
+        dp[0][j]=0;
+        
+    for(int i=1; i<=m; i++)
+    {
+        for(int j=1; j<=n; j++)
+        {
+            if(s1[i-1]==s2[j-1])
+                dp[i][j] = 1 + dp[i-1][j-1];
+            else
+                dp[i][j] = max(dp[i-1][j],dp[i][j-1]);
+        }
+    }
+    
+    return dp[m][n];
+    
+}
+
+int main() {
+	
+	string s1,s2;
+	getline(cin,s1);
+	getline(cin,s2);
+
+	
+	cout<<lcs(s1,s2);
+	
+
+}
