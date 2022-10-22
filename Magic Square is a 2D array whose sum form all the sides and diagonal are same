@@ -1,0 +1,52 @@
+/*2D Array program 4
+ *Magic Square is a 2D array whose sum form all the sides and diagonal are same */
+class Magic_Square
+ {
+   public static void abc(int a[][])
+    { 
+      int lr= a.length;
+      int lc = a[0].length;
+      if(lr!=lc)
+       {
+        System.out.println("The array is not a square array");
+        return;
+       } 
+      int dr=0, dl=0; //Left Right diagonal sum
+      for(int i=0,j=0; i<lr; i++,j++)
+       {
+         dl+= a[i][j];
+       }
+      for(int i=0,j=(lc-1); i<lr; i++,j--)
+       {
+         dr+= a[i][j];
+       }
+      if(dl!=dr)
+       {
+        System.out.println("The array is not a magic square");
+        return;
+       }
+      int et=0, eb=0; //Top Bottum edge sum
+      for(int i=0,j=0,k=(lc-1); j<lc; j++)
+       {
+         et+= a[i][j];
+         eb+= a[k][j];
+       }
+      if(dl!=et || et!=eb)
+       {
+        System.out.println("The array is not a magic square");
+        return;
+       }
+      int er=0, el=0; //Left Right edge sum
+      for(int i=0,j=0,k=(lc-1); i<lr; i++)
+       {
+         el+= a[i][j];
+         er+= a[i][k];
+       }
+      if(dl!=el || el!=er)
+       {
+        System.out.println("The array is not a magic square");
+        return;
+       }
+      System.out.println("The array is a magic square");
+    }
+ }
