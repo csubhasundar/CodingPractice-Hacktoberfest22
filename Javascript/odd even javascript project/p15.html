@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>odd even javascript</title>
+<script type="text/javascript">
+var a,b,i;
+
+
+function odd()
+{
+var a=parseInt(document.getElementById("aa").value);
+var b=parseInt(document.getElementById("bb").value);
+var oddnum=" ";
+  for(i=a;i<=b;i++)
+  {
+    if((i%2)!=0)
+    {
+      oddnum=oddnum+i+" ";
+    }
+  }
+document.getElementById("text").innerHTML=oddnum;
+}
+
+
+function even()
+{
+var a=parseInt(document.getElementById("aa").value);
+var b=parseInt(document.getElementById("bb").value);
+var evennum=" ";
+   for(i=a;i<=b;i++)
+   { 
+     if((i%2)==0)
+     {	
+        evennum=evennum+i+" ";
+     }
+   }
+document.getElementById("text").innerHTML=evennum;
+}
+
+</script>
+</head>
+
+<body>
+<lable>a</lable>
+<input type="text" id="aa"></input><br><br>
+<lable>b</lable>
+<input type="text" id="bb"></input><br><br>
+<input type="submit" value="odd" onclick="odd()"></input>
+<input type="submit" value="even" onclick="even()"></input>
+
+<p id="text">num </p>
+</body>
+</html>
