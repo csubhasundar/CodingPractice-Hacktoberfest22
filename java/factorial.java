@@ -1,33 +1,20 @@
 import java.util.Scanner;
-class factorial {
+public class factorial {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-       int temp ;
+        Scanner obj=new Scanner(System.in);
+        System.out.println("Please the enter the number that you have factorial of :");
+        long a=obj.nextInt();
+        long b=a;
+        long result=a;
 
-    System.out.println("Enter the size of an array");
-             int n=sc.nextInt();
-             int[] arr = new int[n];
-    System.out.println("Enter the "  +n+   " of elemets");
-System.out.println();
+        for (int i=1;i<b;i++){
+            a--;
+             result =a*result;
+
+        }
+        System.out.println("The factorial of the number is :");
+        System.out.println(result);
 
 
-    for ( int i=0;i<n;i++){
-        arr[i] = sc.nextInt();
-    }
-    for(int i=0;i<(n-1);i++){
-
-        for (int j=0;j<(n-i-1);j++){
-
-            if(arr[j]>arr[j+1]){
-            temp=arr[j];
-            arr[j]=arr[j+1];
-            arr[j+1]=temp;
-                     }
-                 }
-             }
-             System.out.println("sorted array is");
-                for(int i=0;i<n;i++){
-                    System.out.println(arr[i]);
-                }                 
     }
 }
