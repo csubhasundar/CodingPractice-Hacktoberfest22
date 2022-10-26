@@ -17,6 +17,8 @@ public class Patterns {
         pattern8(5);
         System.out.println();
         pattern9(5);
+        System.out.println();
+        pattern10(5);
     }
 
     /*
@@ -91,6 +93,17 @@ public class Patterns {
             5 4 3 3 3 3 3 4 5
             5 4 4 4 4 4 4 4 5
             5 5 5 5 5 5 5 5 5
+            
+                    1
+                  2 1 2 
+                3 2 1 2 3
+              4 3 2 1 2 3 4
+            5 4 3 2 1 2 3 4 5 
+              4 3 2 1 2 3 4
+                3 2 1 2 3 
+                  2 1 2 
+                    1 
+
      */
 
     public static void pattern1 (int row) {
@@ -342,6 +355,23 @@ public class Patterns {
                 nst_2 += 2;
             }
             id++;
+        }
+    }
+
+    public static void pattern10 (int row) {
+        for (int i = 1; i <= (row*2)-1; i++) {
+            
+            for(int sp=1;sp<=(i>row?i-row:row-i);sp++)
+                System.out.print("  "); // printing the spaces
+
+            for(int j=(i>row?(2*row)-i:i);j>=1;j--)
+                System.out.print(j+" ");  // printing the numbers from n to 1 
+
+            for(int j=2;j<=(i>row?(2*row)-i:i);j++)
+                System.out.print(j+" ");  // printing the numbers from 2 to n
+
+            System.out.println(); 
+
         }
     }
 }
