@@ -2,7 +2,7 @@
 class GroupAnagrams {
     /*
     Hashing
-    Time complexity - o(n)
+    Time complexity - o(n*m) where m - max length of string
     Space complexity - o(n)
      */
 
