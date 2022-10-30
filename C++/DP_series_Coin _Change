@@ -1,0 +1,23 @@
+int coinChange(vector<int> const &S, int sum)
+{
+    if (sum == 0) {
+        return 0;
+    }
+    if (sum < 0) {
+        return INT_MAX;
+    }
+    int coins = INT_MAX;
+    for (int i: S)
+    {
+        int result = coinChange(S, sum - i);
+        if (result != INT_MAX) {
+            coins = min(coins, result + 1);
+        }
+    }
+    return coins;
+}
+
+The naive approach is to check for every combination of coins for the given sum.
+
+In this approach, we can use recursion to solve this as we have to iterate over all the possible combinations of coins that equal 
+the given sum every time update the minimum no of coins needed to create this sum.
