@@ -25,7 +25,7 @@ class Solution {
     }
 public:
     int maxPathSum(TreeNode* root) {
-        if(root == NULL) return 0;
+        if(root == NULL) return 0 ;
         int a = solve(root);
         return int(answer);
     }
