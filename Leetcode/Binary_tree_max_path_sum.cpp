@@ -3,7 +3,7 @@ using namespace std;
 /* Max path sum difficult leetcode sum in most easy way*/
 
  // Definition for a binary tree node.
-  struct TreeNode {
+  struct TreeNode{
       int val;
       TreeNode *left;
       TreeNode *right;
