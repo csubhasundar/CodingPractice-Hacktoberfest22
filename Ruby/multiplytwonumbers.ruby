@@ -1,6 +1,6 @@
 =begin
     
-This is the basic program to multiply two numbers in ruby programming language
+This is the basic program to multiply two numbers in ruby programming language.
     
 =end
 
