@@ -1,0 +1,51 @@
+// String templates and string Methods
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods of Template strings</title>
+</head>
+<body>
+    <h1>
+        This is tutorial of EcmaScript(ES6).
+    </h1>
+
+    <script>
+        //ES5
+        console.log("My name is Pushkar."+"I am 22 years old."+"this is way to concat 3 strings in normal js.")
+        //ES6
+        console.log(`My name is Pushkar.I am 22 years old.This is way to concat 3 strings in ES6.`)
+
+        let Firstname="Pushkar";
+        let sname="choudhary";
+
+        // ES5
+        console.log("My first name is "+Firstname+" "+"My last name is"+sname);
+        //ES6
+        console.log(`My first name is ${Firstname} My last name is ${sname}`);
+
+        let a=20;
+        let b=30;
+
+        // ES5
+        console.log("Fifty is "+(a+b)+ ' and /n not seventy' + (2*a+b));
+        //ES6
+        console.log(`Fifty is ${a+b} and 
+        not seventy ${2*a+b}`);
+
+
+        // Methods of string templates
+
+        let fname=`${Firstname}`;
+        console.log(`${Firstname}`.startsWith('P'));
+        console.log(`${Firstname}`.endsWith('r'));
+        console.log(`${Firstname}`.includes('ush'));
+        console.log(`${Firstname}`.includes('usr'));
+        console.log(`${Firstname} ${sname} `.repeat(10));
+        console.log(fname .repeat(10));
+    </script>
+</body>
+</html>
